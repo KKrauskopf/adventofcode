@@ -17,6 +17,7 @@ with open('/Users/krauskopf/projects/adventofcode/day4/input.txt') as f:
         boards.append(board)
 
 def solve1(draws, boards):
+    print(boards)
     index_of_board_that_won = -1
     last_draw = 0
     for draw in draws:
