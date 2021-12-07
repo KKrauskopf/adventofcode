@@ -38,11 +38,6 @@ def solve2(input):
 def build_fuel_helper(input):
     max_value = max(input)
     for i in range(0,max_value+1):
-        j = i
-        fuel_needed = 0
-        while i > 0:
-            fuel_needed += i
-            i -= 1
-        fuel_helper[j] = fuel_needed
+        fuel_helper[i] = sum([j for j in range(0,i+1)])
 
 solve2(input)
