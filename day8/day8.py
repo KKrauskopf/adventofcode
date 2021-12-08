@@ -1,3 +1,6 @@
+
+import time
+
 lines = []
 
 with open('/Users/krauskopf/projects/adventofcode/day8/input.txt') as f:
@@ -55,5 +58,7 @@ def solve2(input):
 
 
 
-
-print(solve1(lines))
+start = time.time()
+solve2(lines)
+end = time.time()
+print("took ", round((end - start) * 1000,2), "ms")
