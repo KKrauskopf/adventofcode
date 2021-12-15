@@ -22,11 +22,12 @@ def solve2(start):
             child1, child2 = list(mappings[key])
             new_pair_counts[child1] += value
             new_pair_counts[child2] += value
-            for char in list(child1+child2):
+            for char in list(child1[:-1]+child2[1:]):
                 letters[char] += value
         pair_counts = new_pair_counts
 
-    letter_values = [value/2 if value %2 == 0 else (value-1)/2 for _ ,value in letters.items()]
+    #letter_values = [value/2 if value %2 == 0 else (value-1)/2 for _ ,value in letters.items()]
+    letter_values = [value for _, value in letters.items()]
     maxv = max(letter_values)
     minv = min(letter_values)
     print(maxv - minv)
