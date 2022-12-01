@@ -21,4 +21,3 @@ for elve in elves:
 # solution 2
 calories.sort()
 print(sum(calories[len(calories)-3:]))
-# for i in range (0,2):
